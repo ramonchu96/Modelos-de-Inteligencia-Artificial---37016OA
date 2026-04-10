@@ -32,11 +32,9 @@ El sistema está pensado para consultas de soporte técnico comunes, como proble
 asistente-soporte-ia/
 │
 ├── app/
-│   ├── __init__.py
 │   ├── classifier.py
 │   ├── main.py
 │   ├── predictor.py
-│   ├── preprocess.py
 │   ├── recommender.py
 │   ├── rules.py
 │   ├── schemas.py
@@ -49,5 +47,4 @@ asistente-soporte-ia/
 │   └── classifier.pkl
 │
 ├── requirements.txt
-├── train_model.py
 └── README.md
