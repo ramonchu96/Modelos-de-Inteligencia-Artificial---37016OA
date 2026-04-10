@@ -1,0 +1,684 @@
+{
+  "acceso": {
+    "base_answer": "Parece una incidencia relacionada con el acceso a la cuenta o con las credenciales.",
+    "variants": [
+      "Detecto un problema de acceso o autenticación.",
+      "La incidencia parece estar relacionada con usuario, contraseña o bloqueo de cuenta.",
+      "Parece que tienes un problema para iniciar sesión."
+    ],
+    "steps": [
+      "Comprueba que el nombre de usuario esté bien escrito.",
+      "Verifica que la contraseña sea correcta.",
+      "Asegúrate de no tener activado Bloq Mayús.",
+      "Si sigue fallando, restablece la contraseña.",
+      "Si la cuenta está bloqueada, contacta con soporte."
+    ],
+    "recommendations": {
+      "usuario": "Revisa que no haya espacios en blanco al escribir el usuario.",
+      "contrasena": "Comprueba mayúsculas, minúsculas y caracteres especiales.",
+      "clave": "Prueba a cambiar la clave desde la opción de recuperación.",
+      "bloqueada": "Si la cuenta está bloqueada, puede requerir desbloqueo manual.",
+      "cuenta": "Verifica si la cuenta sigue activa o ha sido suspendida."
+    },
+    "clarifying_questions": [
+      "¿Te aparece un mensaje de usuario o contraseña incorrectos?",
+      "¿La cuenta está bloqueada o solo falla el acceso?",
+      "¿Te ocurre en una aplicación concreta o en todo el sistema?"
+    ],
+    "possible_causes": [
+      "Usuario incorrecto",
+      "Contraseña errónea",
+      "Cuenta bloqueada",
+      "Problema temporal del sistema de autenticación"
+    ]
+  },
+
+  "red": {
+    "base_answer": "Parece una incidencia de red o de conectividad a internet.",
+    "variants": [
+      "Detecto un problema con la conexión de red.",
+      "La incidencia parece relacionada con wifi, cable o salida a internet.",
+      "Parece un fallo de conectividad."
+    ],
+    "steps": [
+      "Comprueba si estás conectado por wifi o cable.",
+      "Verifica si otros dispositivos tienen conexión.",
+      "Reinicia el router o punto de acceso.",
+      "Prueba a desconectar y volver a conectar la red.",
+      "Si el problema persiste, revisa la configuración IP o consulta con soporte."
+    ],
+    "recommendations": {
+      "wifi": "Acércate al router o revisa la intensidad de señal.",
+      "internet": "Comprueba si puedes abrir varias páginas distintas.",
+      "router": "Apaga el router durante 10 segundos y vuelve a encenderlo.",
+      "cable": "Verifica que el cable de red esté bien conectado.",
+      "conexion": "Comprueba si la incidencia afecta solo a tu equipo o a toda la oficina."
+    },
+    "clarifying_questions": [
+      "¿El problema ocurre por wifi, por cable o en ambos casos?",
+      "¿Te falla solo a ti o también a otros compañeros?",
+      "¿No tienes conexión o simplemente va muy lenta?"
+    ],
+    "possible_causes": [
+      "Fallo del router",
+      "Mala cobertura wifi",
+      "Cable desconectado o defectuoso",
+      "Configuración de red incorrecta"
+    ]
+  },
+
+  "impresora": {
+    "base_answer": "Parece una incidencia con la impresora o con la cola de impresión.",
+    "variants": [
+      "Detecto un problema relacionado con la impresora.",
+      "La incidencia parece estar en la impresión o en el dispositivo.",
+      "Parece un fallo de impresora."
+    ],
+    "steps": [
+      "Comprueba que la impresora esté encendida.",
+      "Verifica si tiene papel y tinta o tóner.",
+      "Revisa si hay un atasco de papel.",
+      "Comprueba si la cola de impresión está bloqueada.",
+      "Reinicia la impresora y vuelve a intentar imprimir."
+    ],
+    "recommendations": {
+      "papel": "Asegúrate de que el papel esté bien colocado.",
+      "atasco": "Retira el papel atascado con cuidado antes de reiniciar.",
+      "tinta": "Comprueba si el cartucho o tóner está agotado.",
+      "cola": "Vacía la cola de impresión si hay trabajos bloqueados.",
+      "hp": "Si es una HP, revisa la utilidad de diagnóstico del fabricante."
+    },
+    "clarifying_questions": [
+      "¿No imprime nada, imprime mal o hay atasco?",
+      "¿La impresora aparece online u offline?",
+      "¿Te ocurre con un documento concreto o con todos?"
+    ],
+    "possible_causes": [
+      "Cola de impresión bloqueada",
+      "Atasco de papel",
+      "Falta de tinta o tóner",
+      "Impresora desconectada o fuera de línea"
+    ],
+    "subcases": {
+      "atasco": {
+        "keywords": ["atasco", "papel atascado", "no sale el papel"],
+        "answer": "Parece un atasco de papel en la impresora.",
+        "steps": [
+          "Apaga la impresora.",
+          "Abre la bandeja o tapa correspondiente.",
+          "Retira el papel atascado con cuidado.",
+          "Vuelve a encenderla y prueba de nuevo."
+        ]
+      },
+      "tinta": {
+        "keywords": ["tinta", "toner", "cartucho"],
+        "answer": "El problema parece estar relacionado con tinta o tóner.",
+        "steps": [
+          "Comprueba el nivel de tinta o tóner.",
+          "Verifica que el cartucho esté bien colocado.",
+          "Sustituye el consumible si está agotado."
+        ]
+      }
+    }
+  },
+
+  "software": {
+    "base_answer": "Parece una incidencia relacionada con una aplicación o programa.",
+    "variants": [
+      "Detecto un problema de software.",
+      "La incidencia parece estar relacionada con una aplicación.",
+      "Parece un fallo del programa o del sistema."
+    ],
+    "steps": [
+      "Cierra completamente la aplicación y vuelve a abrirla.",
+      "Reinicia el equipo.",
+      "Comprueba si hay actualizaciones pendientes.",
+      "Si el error persiste, reinstala la aplicación o consulta con soporte."
+    ],
+    "recommendations": {
+      "error": "Anota el mensaje exacto del error para facilitar el diagnóstico.",
+      "programa": "Comprueba si el programa se bloquea al abrir o al realizar una acción concreta.",
+      "aplicacion": "Prueba a ejecutar la aplicación como administrador si procede.",
+      "bloquea": "Cierra procesos colgados desde el administrador de tareas.",
+      "cierra": "Observa si se cierra al iniciar o al usar una función concreta."
+    },
+    "clarifying_questions": [
+      "¿La aplicación no abre, se bloquea o se cierra sola?",
+      "¿El error ocurre siempre o solo en momentos concretos?",
+      "¿Te ocurre solo a ti o a más usuarios?"
+    ],
+    "possible_causes": [
+      "Aplicación corrupta",
+      "Error de configuración",
+      "Falta de permisos",
+      "Versión desactualizada"
+    ]
+  },
+
+  "rendimiento": {
+    "base_answer": "Parece un problema de rendimiento del equipo.",
+    "variants": [
+      "Detecto una incidencia de lentitud o rendimiento.",
+      "Parece que el equipo tiene problemas de rendimiento.",
+      "La incidencia parece relacionada con lentitud del sistema."
+    ],
+    "steps": [
+      "Cierra aplicaciones que no estés usando.",
+      "Reinicia el equipo.",
+      "Comprueba el uso de CPU, memoria y disco.",
+      "Libera espacio en disco si está casi lleno.",
+      "Si persiste, revisa programas de inicio o consulta con soporte."
+    ],
+    "recommendations": {
+      "lento": "Puede haber demasiados procesos abiertos al mismo tiempo.",
+      "memoria": "Revisa si el consumo de RAM está muy alto.",
+      "disco": "Comprueba si el disco está lleno o trabajando al 100%.",
+      "arrancar": "Revisa qué aplicaciones se cargan al iniciar.",
+      "rendimiento": "Prueba tras reiniciar para descartar saturación temporal."
+    },
+    "clarifying_questions": [
+      "¿Va lento siempre o solo al abrir ciertos programas?",
+      "¿La lentitud afecta a todo el equipo o solo a una aplicación?",
+      "¿Ocurre desde hoy o desde hace varios días?"
+    ],
+    "possible_causes": [
+      "Demasiados procesos abiertos",
+      "Poco espacio en disco",
+      "Uso elevado de memoria",
+      "Problemas del disco o del sistema"
+    ]
+  },
+
+  "audio": {
+    "base_answer": "Parece una incidencia relacionada con el audio, los altavoces o el micrófono.",
+    "variants": [
+      "Detecto un problema de audio.",
+      "La incidencia parece estar relacionada con sonido o micrófono.",
+      "Parece un fallo de entrada o salida de audio."
+    ],
+    "steps": [
+      "Comprueba el volumen del sistema.",
+      "Verifica el dispositivo de entrada y salida seleccionado.",
+      "Prueba a reconectar auriculares o micrófono.",
+      "Reinicia la aplicación donde ocurre el problema.",
+      "Si persiste, reinicia el equipo."
+    ],
+    "recommendations": {
+      "microfono": "Comprueba los permisos del micrófono en el sistema.",
+      "micro": "Verifica que el dispositivo correcto esté seleccionado.",
+      "auriculares": "Desconecta y vuelve a conectar los auriculares.",
+      "volumen": "Asegúrate de que el audio no esté silenciado.",
+      "teams": "Revisa la configuración de audio en Teams."
+    },
+    "clarifying_questions": [
+      "¿Falla el micrófono, los altavoces o ambos?",
+      "¿Te ocurre en una videollamada o en todo el equipo?",
+      "¿No oyes nada o el audio se oye mal?"
+    ],
+    "possible_causes": [
+      "Dispositivo incorrecto seleccionado",
+      "Audio silenciado",
+      "Permisos del micrófono desactivados",
+      "Problema del driver o del hardware"
+    ]
+  },
+
+  "camara": {
+    "base_answer": "Parece una incidencia relacionada con la cámara o la webcam.",
+    "variants": [
+      "Detecto un problema con la cámara.",
+      "La incidencia parece estar relacionada con vídeo o webcam.",
+      "Parece un fallo de cámara."
+    ],
+    "steps": [
+      "Comprueba los permisos de cámara en el sistema.",
+      "Cierra otras aplicaciones que puedan estar usando la webcam.",
+      "Revisa la cámara seleccionada en la aplicación.",
+      "Reinicia la app de videollamada o el equipo si es necesario."
+    ],
+    "recommendations": {
+      "webcam": "Asegúrate de que ninguna otra aplicación esté usando la cámara.",
+      "zoom": "Comprueba qué cámara está seleccionada en Zoom.",
+      "teams": "Verifica la configuración de vídeo en Teams.",
+      "permiso": "Revisa que la aplicación tenga permiso para usar la cámara.",
+      "negro": "Si la imagen sale negra, reinicia la aplicación y comprueba los permisos."
+    },
+    "clarifying_questions": [
+      "¿No te ven o la cámara ni siquiera aparece?",
+      "¿El fallo ocurre en Teams, Zoom o en otra aplicación?",
+      "¿La imagen sale negra o simplemente no detecta la cámara?"
+    ],
+    "possible_causes": [
+      "Permisos desactivados",
+      "Otra app está usando la cámara",
+      "Webcam mal seleccionada",
+      "Fallo del dispositivo o del driver"
+    ]
+  },
+
+  "correo": {
+    "base_answer": "Parece una incidencia relacionada con el correo electrónico.",
+    "variants": [
+      "Detecto un problema con el correo.",
+      "La incidencia parece estar relacionada con email o sincronización.",
+      "Parece un fallo del cliente de correo."
+    ],
+    "steps": [
+      "Comprueba la conexión a internet.",
+      "Revisa si la cuenta está sincronizando correctamente.",
+      "Cierra y vuelve a abrir Outlook o la app de correo.",
+      "Comprueba si el buzón está lleno.",
+      "Si sigue fallando, vuelve a iniciar sesión."
+    ],
+    "recommendations": {
+      "outlook": "Comprueba si Outlook muestra errores de sincronización.",
+      "email": "Revisa si puedes acceder al correo desde la web.",
+      "enviar": "Comprueba si los mensajes quedan en bandeja de salida.",
+      "recibir": "Verifica si llegan nuevos correos o si la sincronización falla.",
+      "sincroniza": "Puede ser útil reiniciar la cuenta o la aplicación."
+    },
+    "clarifying_questions": [
+      "¿No puedes enviar, recibir o ambas cosas?",
+      "¿Te ocurre en Outlook o también en webmail?",
+      "¿Te aparece algún error concreto?"
+    ],
+    "possible_causes": [
+      "Buzón lleno",
+      "Error de sincronización",
+      "Conexión inestable",
+      "Sesión caducada"
+    ]
+  },
+
+  "teclado": {
+    "base_answer": "Parece una incidencia relacionada con el teclado.",
+    "variants": [
+      "Detecto un problema con el teclado.",
+      "La incidencia parece estar relacionada con teclas o escritura.",
+      "Parece un fallo del teclado."
+    ],
+    "steps": [
+      "Comprueba la conexión del teclado.",
+      "Prueba otro puerto USB si es externo.",
+      "Reinicia el equipo.",
+      "Comprueba si hay teclas atascadas.",
+      "Si es inalámbrico, revisa pilas o batería."
+    ],
+    "recommendations": {
+      "teclas": "Revisa si alguna tecla está físicamente atascada.",
+      "usb": "Prueba a cambiar el teclado de puerto USB.",
+      "escribe": "Comprueba si el idioma del teclado es el correcto.",
+      "bloqueado": "Verifica si el teclado está desactivado por una combinación de teclas."
+    },
+    "clarifying_questions": [
+      "¿No funciona ninguna tecla o solo algunas?",
+      "¿Es un teclado externo o el del portátil?",
+      "¿Escribe mal o directamente no responde?"
+    ],
+    "possible_causes": [
+      "Teclas atascadas",
+      "Puerto USB defectuoso",
+      "Distribución de teclado incorrecta",
+      "Fallo del dispositivo"
+    ]
+  },
+
+  "raton": {
+    "base_answer": "Parece una incidencia relacionada con el ratón o el touchpad.",
+    "variants": [
+      "Detecto un problema con el ratón.",
+      "La incidencia parece afectar al puntero o al touchpad.",
+      "Parece un fallo del ratón o del panel táctil."
+    ],
+    "steps": [
+      "Comprueba la conexión del ratón.",
+      "Prueba otro puerto USB si corresponde.",
+      "Si es inalámbrico, revisa las pilas o la batería.",
+      "Comprueba si el touchpad está desactivado.",
+      "Reinicia el equipo."
+    ],
+    "recommendations": {
+      "cursor": "Comprueba si el puntero se queda congelado o desaparece.",
+      "inalambrico": "Verifica pilas, batería y receptor USB.",
+      "touchpad": "Revisa si el touchpad está desactivado por combinación de teclas.",
+      "clic": "Comprueba si el fallo afecta al clic izquierdo, derecho o a ambos."
+    },
+    "clarifying_questions": [
+      "¿Falla el ratón externo o el touchpad?",
+      "¿No se mueve el cursor o no funciona el clic?",
+      "¿El problema ocurre siempre o solo a veces?"
+    ],
+    "possible_causes": [
+      "Ratón desconectado",
+      "Batería agotada",
+      "Touchpad desactivado",
+      "Fallo del dispositivo"
+    ]
+  },
+
+  "pantalla": {
+    "base_answer": "Parece una incidencia relacionada con la pantalla o el monitor.",
+    "variants": [
+      "Detecto un problema de pantalla.",
+      "La incidencia parece relacionada con imagen o monitor.",
+      "Parece un fallo de pantalla o salida de vídeo."
+    ],
+    "steps": [
+      "Comprueba que el monitor esté encendido.",
+      "Verifica el cable HDMI, DisplayPort o VGA.",
+      "Comprueba la entrada seleccionada en el monitor.",
+      "Reinicia el equipo y la pantalla.",
+      "Si usas segunda pantalla, prueba a reconectarla."
+    ],
+    "recommendations": {
+      "monitor": "Asegúrate de que el monitor tenga la entrada correcta seleccionada.",
+      "imagen": "Revisa si el cable de vídeo está bien conectado.",
+      "negra": "Si la pantalla está negra, comprueba alimentación y señal.",
+      "externa": "Prueba a desconectar y volver a conectar la pantalla externa.",
+      "parpadea": "Revisa cable, frecuencia y estado del monitor."
+    },
+    "clarifying_questions": [
+      "¿La pantalla está negra, sin señal o con imagen defectuosa?",
+      "¿Te ocurre en la pantalla principal o en una externa?",
+      "¿El equipo parece encendido aunque no haya imagen?"
+    ],
+    "possible_causes": [
+      "Cable mal conectado",
+      "Entrada incorrecta seleccionada",
+      "Monitor apagado o sin señal",
+      "Fallo de pantalla o adaptador gráfico"
+    ]
+  },
+
+  "vpn": {
+    "base_answer": "Parece una incidencia relacionada con la conexión VPN.",
+    "variants": [
+      "Detecto un problema con la VPN.",
+      "La incidencia parece estar relacionada con acceso remoto o VPN.",
+      "Parece un fallo de conexión segura remota."
+    ],
+    "steps": [
+      "Comprueba tu conexión a internet.",
+      "Verifica usuario y contraseña de la VPN.",
+      "Reinicia el cliente VPN.",
+      "Intenta conectarte de nuevo tras reiniciar el equipo.",
+      "Si el problema sigue, comprueba si hay incidencias del servicio."
+    ],
+    "recommendations": {
+      "vpn": "Revisa el mensaje exacto que muestra el cliente VPN.",
+      "credenciales": "Comprueba si las credenciales han cambiado o han caducado.",
+      "conexion": "Asegúrate de que internet funciona antes de iniciar la VPN."
+    },
+    "clarifying_questions": [
+      "¿La VPN no conecta o se desconecta sola?",
+      "¿Te da error de credenciales o de conexión?",
+      "¿Te ocurre siempre o solo desde cierta red?"
+    ],
+    "possible_causes": [
+      "Credenciales incorrectas",
+      "Fallo de conexión a internet",
+      "Cliente VPN desactualizado",
+      "Incidencia del servicio remoto"
+    ]
+  },
+
+  "ofimatica": {
+    "base_answer": "Parece una incidencia relacionada con aplicaciones ofimáticas como Word, Excel o PowerPoint.",
+    "variants": [
+      "Detecto un problema con herramientas ofimáticas.",
+      "La incidencia parece relacionada con Office.",
+      "Parece un fallo en Word, Excel o PowerPoint."
+    ],
+    "steps": [
+      "Cierra y vuelve a abrir la aplicación.",
+      "Prueba a abrir otro documento.",
+      "Reinicia el equipo.",
+      "Comprueba si hay actualizaciones de Office.",
+      "Si persiste, repara la instalación de Office."
+    ],
+    "recommendations": {
+      "word": "Comprueba si el fallo ocurre con todos los documentos o solo con uno.",
+      "excel": "Revisa si hay fórmulas o archivos pesados que estén bloqueando la app.",
+      "powerpoint": "Prueba a abrir la presentación en otro equipo o modo seguro."
+    },
+    "clarifying_questions": [
+      "¿Te ocurre en Word, Excel o PowerPoint?",
+      "¿La app no abre o falla al usar una función concreta?",
+      "¿El problema ocurre con un archivo o con todos?"
+    ],
+    "possible_causes": [
+      "Archivo dañado",
+      "Fallo de Office",
+      "Instalación incompleta",
+      "Complemento conflictivo"
+    ]
+  },
+
+  "navegador": {
+    "base_answer": "Parece una incidencia relacionada con el navegador web.",
+    "variants": [
+      "Detecto un problema con el navegador.",
+      "La incidencia parece relacionada con Chrome, Edge o Firefox.",
+      "Parece un fallo del navegador web."
+    ],
+    "steps": [
+      "Cierra y vuelve a abrir el navegador.",
+      "Prueba otra página web.",
+      "Borra caché y cookies.",
+      "Desactiva extensiones temporalmente.",
+      "Prueba con otro navegador."
+    ],
+    "recommendations": {
+      "chrome": "Comprueba si Chrome tiene actualizaciones pendientes.",
+      "edge": "Prueba a restablecer Edge si sigue fallando.",
+      "firefox": "Revisa si el perfil del navegador está dañado.",
+      "descargar": "Verifica permisos de descarga y espacio libre."
+    },
+    "clarifying_questions": [
+      "¿El navegador no abre o no carga páginas?",
+      "¿Te ocurre en una web concreta o en todas?",
+      "¿Has probado con otro navegador?"
+    ],
+    "possible_causes": [
+      "Caché corrupta",
+      "Extensión conflictiva",
+      "Fallo del navegador",
+      "Problema de conexión"
+    ]
+  },
+
+  "archivos": {
+    "base_answer": "Parece una incidencia relacionada con archivos o carpetas.",
+    "variants": [
+      "Detecto un problema con archivos o documentos.",
+      "La incidencia parece relacionada con apertura, guardado o acceso a ficheros.",
+      "Parece un fallo en la gestión de archivos."
+    ],
+    "steps": [
+      "Comprueba si el archivo existe en la ubicación esperada.",
+      "Verifica permisos de acceso.",
+      "Prueba a abrir el archivo con otra aplicación compatible.",
+      "Copia el archivo a otra carpeta y vuelve a probar.",
+      "Si parece corrupto, intenta recuperar una versión anterior."
+    ],
+    "recommendations": {
+      "pdf": "Comprueba si el visor de PDF funciona con otros archivos.",
+      "guardar": "Revisa si tienes permisos de escritura en la carpeta.",
+      "adjuntar": "Comprueba tamaño y formato del archivo.",
+      "carpeta": "Verifica si la carpeta está en red y si la conexión está activa."
+    },
+    "clarifying_questions": [
+      "¿No puedes abrir, guardar o encontrar el archivo?",
+      "¿Te ocurre con un archivo concreto o con varios?",
+      "¿Está en local o en una carpeta compartida?"
+    ],
+    "possible_causes": [
+      "Archivo corrupto",
+      "Permisos insuficientes",
+      "Ruta no disponible",
+      "Formato no compatible"
+    ]
+  },
+
+  "actualizaciones": {
+    "base_answer": "Parece una incidencia relacionada con actualizaciones del sistema o de aplicaciones.",
+    "variants": [
+      "Detecto un problema con actualizaciones.",
+      "La incidencia parece relacionada con Windows Update o actualizaciones de software.",
+      "Parece un fallo al instalar actualizaciones."
+    ],
+    "steps": [
+      "Reinicia el equipo.",
+      "Comprueba la conexión a internet.",
+      "Vuelve a intentar la actualización.",
+      "Libera espacio en disco si es necesario.",
+      "Si sigue fallando, revisa el código de error."
+    ],
+    "recommendations": {
+      "windows": "Comprueba el estado de Windows Update.",
+      "update": "Anota el código de error de la actualización si aparece.",
+      "office": "Revisa si la actualización falla solo en Office o en todo el sistema."
+    },
+    "clarifying_questions": [
+      "¿La actualización falla al descargar o al instalar?",
+      "¿Te ocurre con Windows o con una aplicación concreta?",
+      "¿Aparece algún código de error?"
+    ],
+    "possible_causes": [
+      "Falta de espacio",
+      "Conexión inestable",
+      "Servicio de actualización bloqueado",
+      "Paquete corrupto"
+    ]
+  },
+
+  "seguridad": {
+    "base_answer": "Parece una incidencia relacionada con seguridad, antivirus o bloqueo por protección del sistema.",
+    "variants": [
+      "Detecto un problema de seguridad o protección.",
+      "La incidencia parece relacionada con antivirus o firewall.",
+      "Parece un bloqueo por seguridad."
+    ],
+    "steps": [
+      "Identifica el mensaje exacto de la alerta.",
+      "Comprueba si el archivo o programa es legítimo.",
+      "Revisa el antivirus o la protección activa.",
+      "No desactives la seguridad sin validación previa.",
+      "Contacta con soporte si se trata de una falsa alarma."
+    ],
+    "recommendations": {
+      "virus": "Ejecuta un análisis completo del sistema si procede.",
+      "malware": "No abras más archivos sospechosos hasta validar el equipo.",
+      "firewall": "Comprueba si el firewall está bloqueando una app conocida.",
+      "antivirus": "Revisa el historial del antivirus para ver qué bloqueó."
+    },
+    "clarifying_questions": [
+      "¿Es una alerta del antivirus, del firewall o del sistema?",
+      "¿Se ha bloqueado un archivo o una aplicación?",
+      "¿La amenaza es real o crees que puede ser un falso positivo?"
+    ],
+    "possible_causes": [
+      "Archivo sospechoso",
+      "Falso positivo del antivirus",
+      "Bloqueo por firewall",
+      "Configuración de seguridad restrictiva"
+    ]
+  },
+
+  "videollamadas": {
+    "base_answer": "Parece una incidencia relacionada con videollamadas o reuniones online.",
+    "variants": [
+      "Detecto un problema en una videollamada.",
+      "La incidencia parece relacionada con Teams, Zoom o Meet.",
+      "Parece un fallo de reuniones online."
+    ],
+    "steps": [
+      "Comprueba tu conexión a internet.",
+      "Revisa micrófono, altavoces y cámara.",
+      "Cierra otras aplicaciones que usen audio o vídeo.",
+      "Reinicia la aplicación de videollamada.",
+      "Vuelve a entrar en la reunión."
+    ],
+    "recommendations": {
+      "teams": "Revisa la configuración de dispositivos en Teams.",
+      "zoom": "Comprueba el dispositivo de audio y vídeo seleccionado en Zoom.",
+      "meet": "Prueba a reabrir la reunión en otra pestaña o navegador.",
+      "pantalla": "Si no puedes compartir pantalla, revisa permisos de la aplicación."
+    },
+    "clarifying_questions": [
+      "¿Falla el acceso a la reunión o los dispositivos dentro de ella?",
+      "¿Te ocurre en Teams, Zoom o Meet?",
+      "¿El problema es de audio, vídeo, pantalla compartida o conexión?"
+    ],
+    "possible_causes": [
+      "Conexión inestable",
+      "Dispositivo mal configurado",
+      "Permisos insuficientes",
+      "Fallo temporal de la plataforma"
+    ]
+  },
+
+  "perifericos": {
+    "base_answer": "Parece una incidencia relacionada con periféricos o dispositivos externos.",
+    "variants": [
+      "Detecto un problema con un dispositivo externo.",
+      "La incidencia parece relacionada con USB o accesorios.",
+      "Parece un fallo de periféricos."
+    ],
+    "steps": [
+      "Desconecta y vuelve a conectar el dispositivo.",
+      "Prueba otro puerto USB.",
+      "Comprueba si el equipo detecta el dispositivo.",
+      "Reinicia el equipo si es necesario.",
+      "Prueba el periférico en otro equipo si puedes."
+    ],
+    "recommendations": {
+      "usb": "Prueba otro puerto USB para descartar el conector.",
+      "disco": "Comprueba si el disco externo aparece en el administrador de discos.",
+      "dock": "Reinicia el dock o vuelve a conectarlo por completo."
+    },
+    "clarifying_questions": [
+      "¿Qué dispositivo externo está fallando?",
+      "¿El equipo no lo detecta o lo detecta mal?",
+      "¿Has probado otro puerto o cable?"
+    ],
+    "possible_causes": [
+      "Puerto defectuoso",
+      "Cable dañado",
+      "Driver ausente",
+      "Fallo del periférico"
+    ]
+  },
+
+  "sistema_operativo": {
+    "base_answer": "Parece una incidencia relacionada con el sistema operativo o con el arranque del equipo.",
+    "variants": [
+      "Detecto un problema del sistema operativo.",
+      "La incidencia parece relacionada con el inicio de Windows o del sistema.",
+      "Parece un fallo de arranque o del sistema base."
+    ],
+    "steps": [
+      "Reinicia el equipo.",
+      "Observa si aparece algún mensaje de error concreto.",
+      "Comprueba si el sistema llega al escritorio o se queda a mitad.",
+      "Si hay bucle de arranque, intenta acceder al modo de recuperación.",
+      "Si persiste, contacta con soporte técnico."
+    ],
+    "recommendations": {
+      "windows": "Anota cualquier código de error o pantalla azul.",
+      "arranca": "Observa si se queda en el logo o si reinicia continuamente.",
+      "pantalla azul": "La pantalla azul suele indicar un error grave de sistema o hardware."
+    },
+    "clarifying_questions": [
+      "¿El equipo no arranca o arranca pero no entra al escritorio?",
+      "¿Aparece pantalla azul o solo se queda cargando?",
+      "¿El problema empezó tras una actualización o de repente?"
+    ],
+    "possible_causes": [
+      "Fallo de arranque",
+      "Error tras actualización",
+      "Sistema dañado",
+      "Problema de hardware o driver"
+    ]
+  }
+}
