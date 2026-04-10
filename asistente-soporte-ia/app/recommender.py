@@ -38,7 +38,7 @@ def extract_keywords(text: str):
         "outlook", "enviar", "recibir", "sincroniza", "email",
         "teclas", "bloqueado", "escribe", "usb",
         "cursor", "inalambrico", "touchpad", "clic",
-        "negra", "monitor", "externa", "parpadea", "imagen",
+        "negra", "monitor","pantalla", "externa", "parpadea", "imagen",
         "vpn", "word", "excel"
     ]
 
@@ -83,8 +83,10 @@ def build_response(category: str, question: str, rule_hits=None):
 
     rec_map = category_info.get("recommendations", {})
 
+    # Filtrar solo rule_hits que existan en recommendations
     valid_rule_hits = [term for term in normalized_rule_hits if term in rec_map]
 
+    # Si no hay palabras clave ni rule_hits válidos, devolver mensaje de no soportado
     if not found_keywords and not valid_rule_hits:
         return {
             "answer": "No puedo consultar ese tipo de información. Solo puedo ayudarte con incidencias de soporte técnico contempladas en la base de conocimiento.",
